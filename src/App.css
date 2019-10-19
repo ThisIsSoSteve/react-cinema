@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -11,8 +11,95 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+body {
+  font-family: "Fjalla One", sans-serif;
 }
 
-.App-link {
-  color: #09d3ac;
+/* Start - Main Grid Layout */
+.container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  /* justify-content: center; */
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "logo navigation";
+  background-color: #000;
+  color: #fff;
+}
+
+.logo {
+  grid-area: logo;
+  align-self: center;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.logo h1 {
+  /* display: inline-block; */
+  float: left;
+  margin-left: 1.3em;
+  margin-right: 0.1em;
+}
+
+.navigation {
+  grid-area: navigation;
+  align-self: center;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  padding: 1em;
+  color: #fff;
+}
+
+/* .navigation ul li a:active {
+  color: #1d0e0e;
+} */
+
+.navigation ul li a:hover {
+  color: #aa0a0a;
+}
+
+.main {
+  grid-area: main;
+  justify-self: center;
+}
+
+.footer {
+  grid-area: footer;
+  /* justify-self: center; */
+  background-color: #000;
+  color: #fff;
+}
+
+/* End - Main Grid Layout */
+
+@media screen and (max-width: 60em) {
+  .header {
+    grid-template-areas: "logo" "navigation";
+    justify-content: center;
+  }
+
+  .navigation ul {
+    padding: 0em;
+  }
+
+  .logo h1 {
+    margin-bottom: 0.2em;
+  }
 }
