@@ -55,6 +55,7 @@ body {
 
 .navigation ul {
   list-style: none;
+  display: inline-block;
 }
 
 .navigation ul li {
@@ -77,15 +78,77 @@ body {
 
 .main {
   grid-area: main;
-  justify-self: center;
+  display: grid;
+  grid-template-columns: auto 75% auto;
+  /* justify-self: center; */
+}
+
+.main .movie {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 25% auto;
+}
+.main .movie .image {
+  display: inline-block;
+}
+
+.main .movie .details {
+  padding-left: 1em;
 }
 
 .footer {
   grid-area: footer;
+  display: inline-grid;
+  grid-template-areas: ". footer-about-us footer-legal footer-social . ";
   /* justify-self: center; */
   background-color: #000;
   color: #fff;
 }
+
+.footer section {
+  justify-self: center;
+  /* text-align: center; */
+}
+
+.footer section ul {
+  list-style: none;
+  padding: 0em;
+}
+
+.footer section ul li svg {
+  margin-right: 0.5em;
+}
+
+.footer-about-us {
+  grid-area: footer-about-us;
+}
+.footer-legal {
+  grid-area: footer-legal;
+}
+
+.footer-social {
+  grid-area: footer-social;
+}
+
+.search {
+  display: inline;
+}
+
+.search input {
+  background-color: transparent;
+  border: 0 solid transparent;
+  border-bottom: 1px solid #fff;
+  padding: 8px 10px;
+  color: #fff;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+/* .searchIcon svg {
+  padding-top: 1em;
+} */
 
 /* End - Main Grid Layout */
 
@@ -101,5 +164,15 @@ body {
 
   .logo h1 {
     margin-bottom: 0.2em;
+  }
+
+  .footer {
+    display: grid;
+    /* grid-template-columns: auto fr1 auto; */
+    grid-template-areas: "footer-about-us" "footer-legal" "footer-social";
+  }
+
+  .footer section {
+    /* justify-self: left; */
   }
 }

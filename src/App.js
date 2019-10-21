@@ -2,6 +2,13 @@ import React from "react";
 import axios from "axios";
 import "./App.css";
 import logoImage from "./images/cinema-logo-500.png";
+import {
+  FaSearch,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube
+} from "react-icons/fa";
 
 export default class App extends React.Component {
   state = {
@@ -40,17 +47,72 @@ export default class App extends React.Component {
                   <a href="/">Log in</a>
                 </li>
               </ul>
+              <div className="search">
+                <span className="searchIcon">
+                  <FaSearch />
+                </span>
+                <input type="text" placeholder="Search..."></input>
+              </div>
             </nav>
           </header>
           <main className="main">
-            main content
-            <ul>
-              {this.state.movies.map(movie => (
-                <li key={movie.id}>{movie.title}</li>
-              ))}
-            </ul>
+            {this.state.movies.map(movie => (
+              <div key={movie.id} className="movie">
+                <div className="image">
+                  <img src={movie.image} alt={movie.title}></img>
+                </div>
+                <div className="details">
+                  <h2>{movie.title}</h2>
+                  <p>{movie.description}</p>
+                  <h4>Cast</h4>
+                  <p>{movie.cast}</p>
+                  <h4>Director</h4>
+                  <p>{movie.director}</p>
+                  <h4>Running time</h4>
+                  <p>{movie.runningTime} mins</p>
+                </div>
+              </div>
+            ))}
           </main>
-          <footer className="footer">footer</footer>
+          <footer className="footer">
+            <section className="footer-about-us">
+              <h3>About Us</h3>
+              <ul>
+                <li>FAQs</li>
+                <li>Feedback</li>
+                <li>Careers</li>
+              </ul>
+            </section>
+            <section className="footer-legal">
+              <h3>Legal</h3>
+              <ul>
+                <li>Terms and Conditions</li>
+                <li>Privacy Policy</li>
+                <li>Cookie Policy</li>
+              </ul>
+            </section>
+            <section className="footer-social">
+              <h3>Social</h3>
+              <ul>
+                <li>
+                  <FaFacebook />
+                  Facebook
+                </li>
+                <li>
+                  <FaTwitter />
+                  Twitter
+                </li>
+                <li>
+                  <FaInstagram />
+                  Instagram
+                </li>
+                <li>
+                  <FaYoutube />
+                  Youtube
+                </li>
+              </ul>
+            </section>
+          </footer>
         </div>
       </>
     );
