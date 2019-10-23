@@ -37,15 +37,19 @@ body {
   align-self: center;
 }
 
-.logo img {
+/* .logo img {
   width: 50px;
-}
+} */
 
 .logo h1 {
   /* display: inline-block; */
-  float: left;
+  /* float: left; */
   margin-left: 1.3em;
   margin-right: 0.1em;
+}
+
+.logo svg {
+  color: #aa0a0a;
 }
 
 .navigation {
@@ -78,35 +82,43 @@ body {
 
 .main {
   grid-area: main;
-  display: grid;
-  grid-template-columns: auto 75% auto;
-  /* justify-self: center; */
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+  color: #fff;
 }
 
 .main .movie {
-  grid-column: 2;
-  display: grid;
-  grid-template-columns: 25% auto;
+  display: flex;
+  padding: 2rem 2rem 2rem 2rem;
+  border-bottom: 2px solid #3a1010;
 }
-.main .movie .image {
-  display: inline-block;
-}
+/* .main .movie .image {
+} */
 
 .main .movie .details {
-  padding-left: 1em;
+  padding-left: 2em;
+  max-width: 800px;
 }
 
 .footer {
   grid-area: footer;
-  display: inline-grid;
-  grid-template-areas: ". footer-about-us footer-legal footer-social . ";
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* grid-template-areas: ". footer-about-us footer-legal footer-social . "; */
   /* justify-self: center; */
   background-color: #000;
   color: #fff;
+  min-height: 300px;
+  padding-top: 100px;
 }
 
 .footer section {
-  justify-self: center;
+  width: 300px;
+  padding: 0 2em 0 2em;
+  /*  */
+  /* justify-self: center; */
   /* text-align: center; */
 }
 
@@ -118,7 +130,7 @@ body {
 .footer section ul li svg {
   margin-right: 0.5em;
 }
-
+/* 
 .footer-about-us {
   grid-area: footer-about-us;
 }
@@ -128,7 +140,7 @@ body {
 
 .footer-social {
   grid-area: footer-social;
-}
+} */
 
 .search {
   display: inline;
@@ -144,6 +156,7 @@ body {
 
 .search input:focus {
   outline: none;
+  border-bottom: 1px solid #aa0a0a;
 }
 
 /* .searchIcon svg {
@@ -167,12 +180,9 @@ body {
   }
 
   .footer {
-    display: grid;
-    /* grid-template-columns: auto fr1 auto; */
-    grid-template-areas: "footer-about-us" "footer-legal" "footer-social";
+    flex-direction: column;
   }
 
   .footer section {
-    /* justify-self: left; */
   }
 }

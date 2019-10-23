@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./App.css";
-import logoImage from "./images/cinema-logo-500.png";
 import {
+  FaFilm,
   FaSearch,
   FaFacebook,
   FaTwitter,
@@ -30,10 +30,9 @@ export default class App extends React.Component {
         <div className="container">
           <header className="header" role="navigation">
             <div className="logo">
-              <h1>Cinema UI</h1>
-              <div>
-                <img src={logoImage} alt="logo" />
-              </div>
+              <h1>
+                Cinema UI <FaFilm />
+              </h1>
             </div>
             <nav className="navigation">
               <ul>
@@ -58,9 +57,7 @@ export default class App extends React.Component {
           <main className="main">
             {this.state.movies.map(movie => (
               <div key={movie.id} className="movie">
-                <div className="image">
-                  <img src={movie.image} alt={movie.title}></img>
-                </div>
+                <img src={movie.image} alt={movie.title}></img>
                 <div className="details">
                   <h2>{movie.title}</h2>
                   <p>{movie.description}</p>
