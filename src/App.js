@@ -18,7 +18,6 @@ export default class App extends React.Component {
   componentDidMount() {
     axios.get(`https://www.cinema-api.co.uk/movie/featured`).then(res => {
       console.log(res);
-
       const movies = res.data;
       this.setState({ movies });
     });
@@ -35,17 +34,12 @@ export default class App extends React.Component {
               </h1>
             </div>
             <nav className="navigation">
-              <ul>
-                <li>
-                  <a href="/">What's on</a>
-                </li>
-                <li>
-                  <a href="/">Cinemas</a>
-                </li>
-                <li>
-                  <a href="/">Log in</a>
-                </li>
-              </ul>
+              <a href="/">What's on</a>
+
+              <a href="/">Cinemas</a>
+
+              <a href="/">Log in</a>
+
               <div className="search">
                 <span className="searchIcon">
                   <FaSearch />
