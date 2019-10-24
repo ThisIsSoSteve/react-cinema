@@ -13,3 +13,6 @@
   height: 445px;
   width: 300px;
 }
+
+@media screen and (max-width: 60em) {
+}

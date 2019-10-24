@@ -1,4 +1,4 @@
-.header {
+header {
   grid-area: header;
   display: flex;
   align-items: baseline;
@@ -46,4 +46,18 @@
 .search input:focus {
   outline: none;
   border-bottom: 1px solid #aa0a0a;
+}
+
+@media screen and (max-width: 60em) {
+  header {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .navigation {
+    margin-left: 1.5em;
+  }
+
+  .logo h1 {
+    margin-bottom: 0.2em;
+  }
 }

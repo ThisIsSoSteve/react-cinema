@@ -5,7 +5,7 @@ import styles from "./nav.module.css";
 export default class Nav extends Component {
   render() {
     return (
-      <header className={styles.header} role="navigation">
+      <header role="navigation">
         <div className={styles.logo}>
           <h1>
             Cinema UI <FaFilm />

@@ -22,3 +22,9 @@ footer section ul {
 footer section ul li svg {
   margin-right: 0.5em;
 }
+
+@media screen and (max-width: 60em) {
+  footer {
+    flex-direction: column;
+  }
+}
