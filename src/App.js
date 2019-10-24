@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./App.css";
 import Nav from "./components/nav";
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import Footer from "./components/footer";
 
 export default class App extends React.Component {
   state = {
@@ -39,45 +39,7 @@ export default class App extends React.Component {
               </div>
             ))}
           </main>
-          <footer className="footer">
-            <section className="footer-about-us">
-              <h3>About Us</h3>
-              <ul>
-                <li>FAQs</li>
-                <li>Feedback</li>
-                <li>Careers</li>
-              </ul>
-            </section>
-            <section className="footer-legal">
-              <h3>Legal</h3>
-              <ul>
-                <li>Terms and Conditions</li>
-                <li>Privacy Policy</li>
-                <li>Cookie Policy</li>
-              </ul>
-            </section>
-            <section className="footer-social">
-              <h3>Social</h3>
-              <ul>
-                <li>
-                  <FaFacebook />
-                  Facebook
-                </li>
-                <li>
-                  <FaTwitter />
-                  Twitter
-                </li>
-                <li>
-                  <FaInstagram />
-                  Instagram
-                </li>
-                <li>
-                  <FaYoutube />
-                  Youtube
-                </li>
-              </ul>
-            </section>
-          </footer>
+          <Footer />
         </div>
       </>
     );

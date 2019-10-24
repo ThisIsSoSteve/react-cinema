@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { FaFilm, FaSearch } from "react-icons/fa";
 import styles from "./nav.module.css";
 
-export default class nav extends Component {
+export default class Nav extends Component {
   render() {
     return (
       <header className={styles.header} role="navigation">

@@ -1,0 +1,24 @@
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #000;
+  color: #fff;
+  min-height: 300px;
+  padding-top: 100px;
+}
+
+footer section {
+  width: 300px;
+  padding: 0 2em 0 2em;
+}
+
+footer section ul {
+  list-style: none;
+  padding: 0em;
+}
+
+footer section ul li svg {
+  margin-right: 0.5em;
+}
