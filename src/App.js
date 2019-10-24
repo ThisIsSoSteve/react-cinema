@@ -1,14 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./App.css";
-import {
-  FaFilm,
-  FaSearch,
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaYoutube
-} from "react-icons/fa";
+import Nav from "./components/nav";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default class App extends React.Component {
   state = {
@@ -27,27 +21,7 @@ export default class App extends React.Component {
     return (
       <>
         <div className="container">
-          <header className="header" role="navigation">
-            <div className="logo">
-              <h1>
-                Cinema UI <FaFilm />
-              </h1>
-            </div>
-            <nav className="navigation">
-              <a href="/">What's on</a>
-
-              <a href="/">Cinemas</a>
-
-              <a href="/">Log in</a>
-
-              <div className="search">
-                <span className="searchIcon">
-                  <FaSearch />
-                </span>
-                <input type="text" placeholder="Search..."></input>
-              </div>
-            </nav>
-          </header>
+          <Nav />
           <main className="main">
             {this.state.movies.map(movie => (
               <div key={movie.id} className="movie">

@@ -4,38 +4,6 @@
   grid-template-areas: "header" "main" "footer";
 }
 
-.header {
-  grid-area: header;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  background-color: #000;
-  color: #fff;
-}
-
-.logo h1 {
-  margin-left: 1.3em;
-  margin-right: 0.5em;
-}
-
-.logo svg {
-  color: #aa0a0a;
-}
-
-.navigation {
-  font-size: 18px;
-}
-
-.navigation a {
-  text-decoration: none;
-  padding: 1em;
-  color: #fff;
-}
-
-.navigation a:hover {
-  color: #aa0a0a;
-}
-
 .main {
   grid-area: main;
   display: flex;
@@ -86,22 +54,6 @@
   margin-right: 0.5em;
 }
 
-.search {
-  display: inline;
-}
-
-.search input {
-  background-color: transparent;
-  border: 0 solid transparent;
-  border-bottom: 1px solid #fff;
-  padding: 8px 10px;
-  color: #fff;
-}
-
-.search input:focus {
-  outline: none;
-  border-bottom: 1px solid #aa0a0a;
-}
 /* End - Main Grid Layout */
 
 @media screen and (max-width: 60em) {
