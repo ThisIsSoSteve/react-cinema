@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaFilm, FaSearch } from "react-icons/fa";
 import styles from "./nav.module.css";
+import { Link } from "react-router-dom";
 
 export default class Nav extends Component {
   render() {
@@ -12,12 +13,9 @@ export default class Nav extends Component {
           </h1>
         </div>
         <nav className={styles.navigation}>
-          <a href="/">What's on</a>
-
-          <a href="/">Cinemas</a>
-
-          <a href="/">Log in</a>
-
+          <Link to="/">What's on</Link>
+          <Link to="/cinemas">Cinemas</Link>
+          <Link to="/login">Log in</Link>
           <div className={styles.search}>
             <span>
               <FaSearch />

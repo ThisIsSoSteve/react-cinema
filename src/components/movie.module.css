@@ -4,6 +4,10 @@
   border-bottom: 2px solid #3a1010;
 }
 
+.movie:last-child {
+  border-bottom: 0 solid transparent;
+}
+
 .details {
   padding-left: 2em;
   max-width: 800px;
@@ -12,6 +16,7 @@
 .movie img {
   height: 445px;
   width: 300px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 60em) {

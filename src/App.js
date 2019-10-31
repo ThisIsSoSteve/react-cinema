@@ -2,7 +2,11 @@ import React from "react";
 import "./App.css";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
-import Movie from "./components/movie";
+import { Route, Switch } from "react-router-dom";
+import Featured from "./pages/featured";
+import Cinemas from "./pages/cinemas";
+import Login from "./pages/login";
+import Error from "./pages/error";
 
 export default class App extends React.Component {
   render() {
@@ -10,7 +14,12 @@ export default class App extends React.Component {
       <div className="container">
         <Nav />
         <main className="main">
-          <Movie />
+          <Switch>
+            <Route exact path="/" component={Featured} />
+            <Route exact path="/cinemas" component={Cinemas} />
+            <Route exact path="/login" component={Login} />
+            <Route component={Error} />
+          </Switch>
         </main>
         <Footer />
       </div>
